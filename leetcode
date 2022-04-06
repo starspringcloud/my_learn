@@ -4,3 +4,24 @@
 
 2.链表
   当头节点不确定的时候，使用哑巴节点
+
+
+3.排列组合问题，就要用回溯
+https://leetcode-cn.com/problems/da-yin-cong-1dao-zui-da-de-nwei-shu-lcof/
+
+模版：
+void backtrace()
+{
+   if ()
+   {
+    res.push_back();
+   }
+   
+   for (int i=0;i..) // 遍历组合
+   {
+    curr.push(i);
+    backtrace();    // 深度优先遍历
+    curr.pop();     // 回溯
+   }
+   
+}
