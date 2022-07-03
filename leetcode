@@ -10,7 +10,7 @@
 3.排列组合问题，就要用回溯
 https://leetcode-cn.com/problems/da-yin-cong-1dao-zui-da-de-nwei-shu-lcof/
 
-模版：
+回溯模版：
 void backtrace()
 {
    if ()
@@ -26,3 +26,20 @@ void backtrace()
    }
    
 }
+
+滑动窗口模版
+unordered_set<char> mp;
+int slow=0,fast=0;
+int ans=0;
+
+for (;fast<s.size();fast++)
+{
+    while (mp.count(s[fast])>0)
+    {
+        mp.erase(s[slow++]);
+    }
+
+    ans = max(ans, fast-slow+1);
+    mp.insert(s[fast]);
+}
+
